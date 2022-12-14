@@ -19,7 +19,7 @@ public class Day3 {
         System.out.println(lines.stream().map(Day3::findCommonChar).map(Day3::toPriority).reduce(Math::addExact).orElseThrow());
 
         // second part
-        Map<Character, Integer> occurrences = new HashMap<>();;
+        Map<Character, Integer> occurrences = new HashMap<>();
         int sum = 0;
         for (int i = 0; i < lines.size(); i++) {
             if (i % 3 == 0) {
