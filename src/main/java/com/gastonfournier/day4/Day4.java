@@ -1,17 +1,20 @@
 package com.gastonfournier.day4;
 
+import com.gastonfournier.utils.Solution;
+
 import java.util.List;
 
 import static com.gastonfournier.utils.Reader.readFileAsLines;
 
-public class Day4 {
+public class Day4 implements Solution<Integer, Integer> {
     public static void main(String[] args) {
         List<String> input = readFileAsLines("day4.input.txt");
         System.out.println(new Day4().part1(input));
         System.out.println(new Day4().part2(input));
     }
 
-    public int part1(List<String> input) {
+    @Override
+    public Integer part1(List<String> input) {
         int count = 0;
         for (String pairCsv: input) {
             String[] elves = pairCsv.split(",");
@@ -29,7 +32,8 @@ public class Day4 {
         return new Range(Integer.parseInt(parts[0]), Integer.parseInt(parts[1]));
     }
 
-    public int part2(List<String> input) {
+     @Override
+     public Integer part2(List<String> input) {
         int count = 0;
         for (String pairCsv: input) {
             String[] elves = pairCsv.split(",");
