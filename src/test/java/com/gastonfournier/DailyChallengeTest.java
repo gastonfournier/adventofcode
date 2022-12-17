@@ -5,19 +5,26 @@ import com.gastonfournier.utils.Solution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public abstract class DailyChallengeTest {
+public abstract class DailyChallengeTest<T, U> {
 
     private DailyChallenge challenge;
 
     public abstract Solution solution();
-    public abstract List<String> getInput();
-    public abstract <T> T expected1();
-    public abstract <T> T expected2();
+    public List<String> getInput() {
+        return Arrays.asList(getStringInput().split("\n"));
+    }
+
+    public String getStringInput() {
+        throw new RuntimeException("Either extend and override getInput or getInputStream");
+    }
+
+    public abstract T expected1();
+    public abstract U expected2();
 
     @BeforeEach
     void setup() {
