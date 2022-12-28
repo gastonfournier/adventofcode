@@ -21,6 +21,7 @@ repositories {
 
 dependencies {
 	implementation group: 'com.google.code.gson', name: 'gson', version: '2.7'
+	implementation group: 'io.vavr', name: 'vavr', version: '1.0.0-alpha-4'
 
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
 	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
