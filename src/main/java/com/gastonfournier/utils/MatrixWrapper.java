@@ -1,4 +1,4 @@
-package com.gastonfournier.day14;
+package com.gastonfournier.utils;
 
 import java.util.Arrays;
 

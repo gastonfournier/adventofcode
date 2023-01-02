@@ -26,7 +26,7 @@ public class Day9 implements Solution<Integer, Integer> {
             Motion motion = new Motion(line);
             while (motion.hasMotion()) {
                 head = motion.move1(head);
-                if (head.cellDistance(tail) > 1) {
+                if (head.manhattanDistance(tail) > 1) {
                     tail = moveTowards(tail, head);
                     visited.add(tail);
                 }
@@ -67,7 +67,7 @@ public class Day9 implements Solution<Integer, Integer> {
                 //System.out.printf("Head at (%s, %s)%n", head.x(), head.y());
                 for (int i = 1; i < rope.size(); i++) {
                     Point knot = rope.get(i);
-                    if (follow.cellDistance(knot) > 1) {
+                    if (follow.manhattanDistance(knot) > 1) {
                         knot = moveTowards(knot, follow);
                         rope.set(i, knot); // replace know it rope with new position
                         //System.out.printf("\tTail %s moved to (%s, %s)%n", i, knot.x(), knot.y());

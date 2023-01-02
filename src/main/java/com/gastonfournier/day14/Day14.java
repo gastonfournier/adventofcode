@@ -1,6 +1,7 @@
 package com.gastonfournier.day14;
 
 import com.gastonfournier.utils.DailyChallenge;
+import com.gastonfournier.utils.MatrixWrapper;
 import com.gastonfournier.utils.Point;
 import com.gastonfournier.utils.Solution;
 
