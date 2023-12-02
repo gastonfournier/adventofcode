@@ -1,18 +1,19 @@
 package com.gastonfournier.day7;
 
+
 import com.gastonfournier.DailyChallengeTest;
 import com.gastonfournier.utils.Solution;
 
 class Day7Test extends DailyChallengeTest {
 
-    @Override
-    public Solution solution() {
-        return new Day7();
-    }
+  @Override
+  public Solution solution() {
+    return new Day7();
+  }
 
-    @Override
-    public String getStringInput() {
-        return """
+  @Override
+  public String getStringInput() {
+    return """
         $ cd /
         $ ls
         dir a
@@ -37,15 +38,15 @@ class Day7Test extends DailyChallengeTest {
         5626152 d.ext
         7214296 k
         """;
-    }
+  }
 
-    @Override
-    public Integer expected1() {
-        return 95437;
-    }
+  @Override
+  public Integer expected1() {
+    return 95437;
+  }
 
-    @Override
-    public Integer expected2() {
-        return 24933642;
-    }
+  @Override
+  public Integer expected2() {
+    return 24933642;
+  }
 }

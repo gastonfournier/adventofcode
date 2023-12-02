@@ -1,20 +1,20 @@
 package com.gastonfournier.day10;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import com.gastonfournier.DailyChallengeTest;
 import com.gastonfournier.utils.Solution;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class Day10Test extends DailyChallengeTest {
 
-    @Override
-    public Solution solution() {
-        return new Day10();
-    }
+  @Override
+  public Solution solution() {
+    return new Day10();
+  }
 
-    @Override
-    public String getStringInput() {
-        return """
+  @Override
+  public String getStringInput() {
+    return """
         addx 15
         addx -11
         addx 6
@@ -162,22 +162,23 @@ class Day10Test extends DailyChallengeTest {
         noop
         noop
         """;
-    }
+  }
 
-    @Override
-    public Integer expected1() {
-        return 13140;
-    }
+  @Override
+  public Integer expected1() {
+    return 13140;
+  }
 
-    @Override
-    public String expected2() {
-        return """
+  @Override
+  public String expected2() {
+    return """
                 ##..##..##..##..##..##..##..##..##..##..
                 ###...###...###...###...###...###...###.
                 ####....####....####....####....####....
                 #####.....#####.....#####.....#####.....
                 ######......######......######......####
                 #######.......#######.......#######.....
-                """.trim();
-    }
+                """
+        .trim();
+  }
 }
