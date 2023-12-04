@@ -24,4 +24,22 @@ public class Reader {
     }
     return lines;
   }
+
+  public static String readFileAsString(String filename) {
+    StringBuilder lines = new StringBuilder();
+    try {
+      ClassLoader classLoader = Reader.class.getClassLoader();
+      BufferedReader reader =
+              new BufferedReader(new InputStreamReader(classLoader.getResourceAsStream(filename)));
+      String line = reader.readLine();
+
+      while (line != null) {
+        lines.append(line).append("\n");
+        line = reader.readLine();
+      }
+    } catch (Exception e) {
+      throw new RuntimeException(e);
+    }
+    return lines.toString();
+  }
 }

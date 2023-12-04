@@ -20,7 +20,7 @@ public class Day15 implements Solution<Integer, Long> {
   }
 
   public static void main(String[] args) {
-    DailyChallenge challenge = new DailyChallenge(new Day15(2000000, 4000000), "day15.input.txt");
+    DailyChallenge<Integer, Long> challenge = new DailyChallenge<>(new Day15(2000000, 4000000), "day15.input.txt");
     challenge.run();
   }
 

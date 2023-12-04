@@ -12,7 +12,6 @@ class Day10Test extends DailyChallengeTest {
     return new Day10();
   }
 
-  @Override
   public String getStringInput() {
     return """
         addx 15

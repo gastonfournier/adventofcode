@@ -1,7 +1,5 @@
 package com.gastonfournier.day4;
 
-import static org.assertj.core.api.Assertions.*;
-
 import com.gastonfournier.DailyChallengeTest;
 import com.gastonfournier.utils.Solution;
 import java.util.Arrays;
