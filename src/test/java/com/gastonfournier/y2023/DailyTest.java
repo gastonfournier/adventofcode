@@ -20,40 +20,38 @@ public abstract class DailyTest<T, U> {
         this.inputs = inputs;
     }
 
-    @Test
-    void testPart1Example() {
-        String input = inputs.get(0);
-        T expected = (T) solutions.get(0);
+    void testPart1(int index) {
+        String input = inputs.get(index);
+        T expected = (T) solutions.get(index);
         DailyChallenge<T, U> challenge = new DailyChallenge<>(solver, Arrays.asList(input.split("\n")));
         T response = challenge.part1();
         System.out.println("Got response " + response);
         assertThat(response).isEqualTo(expected);
+    }
+
+    @Test
+    void testPart1Example() {
+        testPart1(0);
     }
 
     @Test
     void testPart1() {
-        String input = inputs.get(1);
-        T expected = (T) solutions.get(1);
-        DailyChallenge<T, U> challenge = new DailyChallenge<>(solver, Arrays.asList(input.split("\n")));
-        T response = challenge.part1();
-        System.out.println("Got response " + response);
-        assertThat(response).isEqualTo(expected);
+        testPart1(1);
     }
 
     @Test
     void testPart2Example() {
-        String input = inputs.get(2);
-        U expected = (U) solutions.get(2);
-        DailyChallenge<T, U> challenge = new DailyChallenge<>(solver, Arrays.asList(input.split("\n")));
-        U response = challenge.part2();
-        System.out.println("Got response " + response);
-        assertThat(response).isEqualTo(expected);
+        testPart2(2);
     }
 
     @Test
     void testPart2() {
-        String input = inputs.get(3);
-        U expected = (U) solutions.get(3);
+        testPart2(3);
+    }
+
+    void testPart2(int index) {
+        String input = inputs.get(index);
+        U expected = (U) solutions.get(index);
         DailyChallenge<T, U> challenge = new DailyChallenge<>(solver, Arrays.asList(input.split("\n")));
         U response = challenge.part2();
         System.out.println("Got response " + response);
